@@ -1,2 +1,2 @@
 # ds307.github.io
-# Web Dev & Society Rep
+# Web Dev & Society Repository for ds307
