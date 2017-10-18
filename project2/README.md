@@ -1,7 +1,7 @@
 #ds307.github.io
 #Web Dev & Society Repository for ds307
 
-# Project 1 - Intro to HTML
+# Project 2 - Intro to CSS
 
 # Duke Community Standard - 
 
