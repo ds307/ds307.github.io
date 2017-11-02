@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home - Assignment 3</title>
+<link href="styles.css" type="text/css"rel="stylesheet" />
+<h1><i>Web Development and Society</i></h1>
+<h4>Introduction to JavaScript</h4>
+</head>
+<ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="page2.html">Bruegel and Auden</a></li>
+  <li><a href="https://www.w3schools.com/" target="_blank">W3Schools!</a></li>
+
+</ul>
+<body>
+
+
+<p>Click on a task button to perform task.</p>
+
+<button onclick="myFunction()">Task 1</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+	var x = prompt("Enter a Value", "0");
+ 	var num1 = parseInt(x);
+    var a = (5*num1)-(3*num1*num1)+(13);
+    document.getElementById("demo").innerHTML = a;
+}
+</script>
+
+<button onclick="myFunction2()">Task 2</button>
+
+<p id="demo2"></p>
+
+<script>
+function myFunction2() {
+	var x = prompt("Enter a Value", "0");
+	var y = prompt("Enter a Value", "1");
+	var z = prompt("Enter a Value", "2");
+	var a = x+" "+y+" "+z;
+
+	myHeader.innerText = "Hello, "+a;
+
+}
+</script>
+
+<h3 id="myHeader">Task 2</h3>
+
+<button onclick="myFunction3()">Task 3</button>
+
+<p id="demo3"></p>
+
+<script>
+function myFunction3() {
+	var a = prompt("Enter a Value", "0");
+ 	var num1 = parseInt(a);
+ 	var b = prompt("Enter a Value", "0");
+ 	var num2 = parseInt(b);
+ 	if (num1>num2){
+ 		var x = "bananas";
+    	var y = x.fontcolor("yellow");
+    	document.getElementById("demo3").innerHTML = y;
+ 	} else if (num1<num2){
+ 		var x = "porcupine";
+    	var y = x.fontcolor("brown");
+    	document.getElementById("demo3").innerHTML = y;
+ 	} else{
+ 		if(num1>=0){
+ 			var x = "green apples";
+    		var y = x.fontcolor("green");
+    		document.getElementById("demo3").innerHTML = y;
+ 		} else{
+ 			var x = "red apples";
+    		var y = x.fontcolor("red");
+    		document.getElementById("demo3").innerHTML = y;
+ 		}
+ 	}
+}
+</script>
+
+
+<button onclick="myFunction4()">Task 4</button>
+
+<p id="demo4"></p>
+
+<script>
+function myFunction4() {
+	var x = prompt("Enter a Value", "0");
+	var check="";
+	for (i = 0; i < x.length; i++){
+		
+	}
+
+
+
+
+
+	var y = "valid".fontcolor("green");
+
+	document.getElementById("demo4").innerHTML = y;
+
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
