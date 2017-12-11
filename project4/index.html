@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home - Assignment 3</title>
+<link href="styles.css" type="text/css"rel="stylesheet" />
+<h1><i>Web Development and Society</i></h1>
+<h4>Introduction to JavaScript</h4>
+</head>
+<ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="page2.html">Bruegel and Auden</a></li>
+  <li><a href="https://www.w3schools.com/" target="_blank">W3Schools!</a></li>
+
+</ul>
+<body>
+
+
+
+<p>Click on a task button to perform task.</p>
+
+
+
+<p id="demo"></p>
+
+<script src="jquery.js"></script>
+<script>
+$(document).ready(function(){
+	$("#button1").click(function(){
+        $(".sum").val("0");
+        $(".key").val("");
+
+        function calc(){
+        var $num1=parseFloat($(".num1").val());
+        $(".sum").val((5*$num1)-(3*$num1*$num1)+(13));
+    }
+    $(".key").keyup(function(){
+        calc();
+    });
+    });
+});
+</script>
+<button id="button1">Task 1</button>
+<form>
+    <input type="text" placeholder="Enter 1" class="num1 key">
+    <br><br>
+    Result: <input type="text" class="sum" readonly="readonly"><br><br><br>
+</form>
+
+
+
+
+<script>
+$(document).ready(function(){
+        $(".sum1").val("0");
+        $(".key").val("");
+
+        function calc(){
+        var $num2=parseFloat($(".num2").val());
+		var $num3=parseFloat($(".num3").val());
+        
+        if ($num2>$num3){
+        	$(".sum1").val("bananas");
+        }
+
+
+    }
+    $(".key").keyup(function(){
+        calc();
+    });
+});
+</script>
+<button id="button3">Task 3</button>
+<form>
+    <input type="text" placeholder="Number 1" class="num2 key">
+    <input type="text" placeholder="Number 2" class="num3 key">
+    <br><br>
+    Sum: <input type="text" class="sum1" readonly="readonly"><br><br><br>
+</form>
+</div>
+
+
+
+
+
+
+<br>
+<button onclick="myFunction2()">Task 2</button>
+
+<p id="demo2"></p>
+
+<script>
+function myFunction2() {
+	var x = prompt("Enter a Value", "0");
+	var y = prompt("Enter a Value", "1");
+	var z = prompt("Enter a Value", "2");
+	var a = x+" "+y+" "+z;
+
+	myHeader.innerText = "Hello, "+a;
+
+}
+</script>
+
+<h3 id="myHeader">Task 2</h3>
+
+<button onclick="myFunction3()">Task 3</button>
+
+<p id="demo3"></p>
+
+<script>
+function myFunction3() {
+	var a = prompt("Enter a Value", "0");
+ 	var num1 = parseInt(a);
+ 	var b = prompt("Enter a Value", "0");
+ 	var num2 = parseInt(b);
+ 	if (num1>num2){
+ 		var x = "bananas";
+    	var y = x.fontcolor("yellow");
+    	document.getElementById("demo3").innerHTML = y;
+ 	} else if (num1<num2){
+ 		var x = "porcupine";
+    	var y = x.fontcolor("brown");
+    	document.getElementById("demo3").innerHTML = y;
+ 	} else{
+ 		if(num1>=0){
+ 			var x = "green apples";
+    		var y = x.fontcolor("green");
+    		document.getElementById("demo3").innerHTML = y;
+ 		} else{
+ 			var x = "red apples";
+    		var y = x.fontcolor("red");
+    		document.getElementById("demo3").innerHTML = y;
+ 		}
+ 	}
+}
+</script>
+
+
+<button onclick="myFunction4()">Task 4</button>
+
+<p id="demo4"></p>
+
+<script>
+function myFunction4() {
+	var x = prompt("Enter a Value", "0");
+	var check="";
+	for (i = 0; i < x.length; i++){
+		
+	}
+
+
+
+
+
+	var y = "valid".fontcolor("green");
+
+	document.getElementById("demo4").innerHTML = y;
+
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
