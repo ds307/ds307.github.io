@@ -51,6 +51,8 @@ $(document).ready(function(){
 
 <script>
 $(document).ready(function(){
+    $("#button3").click(function(){
+
         $(".sum1").val("0");
         $(".key").val("");
 
@@ -60,12 +62,26 @@ $(document).ready(function(){
         
         if ($num2>$num3){
         	$(".sum1").val("bananas");
+            $(".sum1").css("color", "yellow");
+        }
+        if ($num2<$num3){
+                $(".sum1").val("porcupine");
+                $(".sum1").css("color", "brown");
         }
 
+        if ($num2==$num3 && $num2>0){
+            $(".sum1").val("red apples");
+            $(".sum1").css("color", "red");
+        }
+        if ($num2==$num3 && $num2<0){
+            $(".sum1").val("green apples");
+            $(".sum1").css("color", "green");
+        }
 
     }
     $(".key").keyup(function(){
         calc();
+    });
     });
 });
 </script>
@@ -81,83 +97,34 @@ $(document).ready(function(){
 
 
 
-
-
-<br>
-<button onclick="myFunction2()">Task 2</button>
-
-<p id="demo2"></p>
-
+<script src="jquery.js"></script>
 <script>
-function myFunction2() {
-	var x = prompt("Enter a Value", "0");
-	var y = prompt("Enter a Value", "1");
-	var z = prompt("Enter a Value", "2");
-	var a = x+" "+y+" "+z;
+$(document).ready(function(){
+    $("#button5").click(function(){
 
-	myHeader.innerText = "Hello, "+a;
+        $(".sum5").val("0");
+        $(".key").val("");
 
-}
+        function calc(){
+
+
+        var $num5=$("#txtEmail").val()
+        var arr = $num5.split(',');
+        var temp=arr[2];
+        $(".sum5").val(temp);
+    }
+    $(".key").keyup(function(){
+        calc();
+    });
+    });
+    });
 </script>
-
-<h3 id="myHeader">Task 2</h3>
-
-<button onclick="myFunction3()">Task 3</button>
-
-<p id="demo3"></p>
-
-<script>
-function myFunction3() {
-	var a = prompt("Enter a Value", "0");
- 	var num1 = parseInt(a);
- 	var b = prompt("Enter a Value", "0");
- 	var num2 = parseInt(b);
- 	if (num1>num2){
- 		var x = "bananas";
-    	var y = x.fontcolor("yellow");
-    	document.getElementById("demo3").innerHTML = y;
- 	} else if (num1<num2){
- 		var x = "porcupine";
-    	var y = x.fontcolor("brown");
-    	document.getElementById("demo3").innerHTML = y;
- 	} else{
- 		if(num1>=0){
- 			var x = "green apples";
-    		var y = x.fontcolor("green");
-    		document.getElementById("demo3").innerHTML = y;
- 		} else{
- 			var x = "red apples";
-    		var y = x.fontcolor("red");
-    		document.getElementById("demo3").innerHTML = y;
- 		}
- 	}
-}
-</script>
-
-
-<button onclick="myFunction4()">Task 4</button>
-
-<p id="demo4"></p>
-
-<script>
-function myFunction4() {
-	var x = prompt("Enter a Value", "0");
-	var check="";
-	for (i = 0; i < x.length; i++){
-		
-	}
-
-
-
-
-
-	var y = "valid".fontcolor("green");
-
-	document.getElementById("demo4").innerHTML = y;
-
-}
-</script>
-
+<button id="button5">Task 5</button>
+<form>
+    <input type="text" placeholder="Enter 1" class="num5 key" id="txtEmail">
+    <br><br>
+    Result: <input type="text" class="sum5" readonly="readonly"><br><br><br>
+</form>
 
 
 
